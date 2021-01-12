@@ -6,13 +6,15 @@ This is a document to help me learn React Native, including setup, tooling etc. 
 
 ### Running a React Native Application - Android
 1. Start Metro
-Metro: "takes in an entry file and various options, and returns a single JavaScript file that includes all your code and its dependencies."
+
+**Metro**: "takes in an entry file and various options, and returns a single JavaScript file that includes all your code and its dependencies."
+
 (Can use Yarn as well)
 ```
 npx react-native start
 ```
 Keep Metro running in a separate terminal.
-2. Start the application
+1. Start the application
 ```
 npx react-native run-android
 ```
