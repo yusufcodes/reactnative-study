@@ -14,10 +14,12 @@ This is a document to help me learn React Native, including setup, tooling etc. 
 npx react-native start
 ```
 Keep Metro running in a separate terminal.
-1. Start the application
+
+2. Start the application
 ```
 npx react-native run-android
 ```
+
 3. Modifying the app
 - Edit anything in App.js
 - Reload: Press R twice, or select Reload from Developer Menu (Command M)
