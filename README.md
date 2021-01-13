@@ -1,6 +1,6 @@
 # Overview
 
-This is a document to help me learn React Native, including setup, tooling etc. Started: 12/1/20
+This is a document to help me learn React Native, including setup, tooling etc. Started: 12/1/21
 
 ## React Native CLI
 
