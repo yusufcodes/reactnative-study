@@ -114,6 +114,69 @@ export default PizzaTranslator;
 ### Using a ScrollView
 13/1/21: Got up to [Using a ScrollView](https://reactnative.dev/docs/using-a-scrollview)
 
+- **ScrollView**: A scrolling container that can contain **multiple components and views**. 
+- **pagingEnabled**: A prop which, when configured, allows for paging through different uses through swiping.
+- Using ScrollViews: Best for a small number of things of a limited size - **all elements and views in ScrollView are rendered, even if not on the screen.** (FlatList should be used if you have a long list to display)
+
+**Example ScrollView**
+```js
+import React from 'react';
+import { Image, ScrollView, Text } from 'react-native';
+
+const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64
+};
+
+export default App = () => (
+  <ScrollView>
+    <Text style={{ fontSize: 96 }}>Scroll me plz</Text>
+    <Image source={logo} />
+    { /* More elements here...*/ }
+    <Text style={{ fontSize: 80 }}>React Native</Text>
+  </ScrollView>
+);
+
+```
+
+### Using List Views
+
+There's two main components used for outputting lists: FlatList or SectionList.
+
+**FlatList:** A scrolling list of **changing, but similarly structured data.** This is good for long lists of data, and **only renders elements that are currently on the screen**.
+
+Props: data (items to be displayed), renderItem
+
+**Example**
+
+renderItem: This is the function containing the output we want for each item in **data**
+```js
+<FlatList
+  data={[
+    {key: 'Devin'},
+    {key: 'Dan'},
+    {key: 'Dominic'},
+    {key: 'Jackson'},
+    {key: 'James'},
+    {key: 'Joel'},
+    {key: 'John'},
+    {key: 'Jillian'},
+    {key: 'Jimmy'},
+    {key: 'Julie'},
+  ]}
+  renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
+  />
+```
+
+### Troubleshooting
+
+No notes taken but reference here: [Troubleshooting in React Native](https://reactnative.dev/docs/troubleshooting)
+
+### Platform Specific Code
+
+No notes taken, but this part of the docs goes over writing code specific to Android or iOS if needed: [Platform Specific Code in React Native](https://reactnative.dev/docs/platform-specific-code)
+
 ## React Native with Expo
 
 To Do: Learn how Expo handles things for the developer compared to R.N development without Expo
