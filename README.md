@@ -4,6 +4,12 @@ This is a document to help me learn React Native, including setup, tooling etc. 
 
 ## React Native CLI
 
+### Creating a new project
+
+```
+npx react-native init ProjectNameHere
+```
+
 ### Running a React Native Application - Android
 1. Start Metro
 
@@ -111,3 +117,10 @@ export default PizzaTranslator;
 ## React Native with Expo
 
 To Do: Learn how Expo handles things for the developer compared to R.N development without Expo
+
+## CodeJam Notes - 14/1/21
+
+### Navigating between screens
+
+### Styling
+- We can use **StyleSheet** which comes with React Native to use out of the box styles.

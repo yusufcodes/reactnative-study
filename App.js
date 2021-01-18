@@ -9,42 +9,32 @@ import {
   Button,
   Pressable,
 } from 'react-native';
+import * as React from 'react';
+import {Text, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+function SettingsScreen() {
+  return (
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
 
 const HelloWorldApp = () => {
-  return (
-    <ScrollView>
-      <Text>This is another demo app...</Text>
-      <View>
-        <Text>Some more interesting text 😀</Text>
-        <Image
-          source={{
-            uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
-          }}
-          style={{width: 200, height: 200}}
-        />
-      </View>
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-        }}
-        defaultValue="You can type in me"
-      />
-      <Button
-        onPress={() => {
-          alert('You tapped the button!');
-        }}
-        title="Press Me"
-      />
-      <Pressable
-        onPress={() => {
-          alert('Hi!');
-        }}>
-        <Text>I'm pressable!</Text>
-      </Pressable>
-    </ScrollView>
-  );
+  export default function App() {
+    return (
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Settings" component={SettingsScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    );
+  }
 };
 
 export default HelloWorldApp;
